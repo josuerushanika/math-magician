@@ -9,18 +9,20 @@ html {
 }
 
 .maincalculator {
-  box-shadow: rgba(100, 100, 111, 0.2) 0 7px 29px 0;
   margin: 2rem auto;
   width: 80%;
+}
+
+button {
+  padding: 1.5rem;
+  width: 25%;
+  font-size: 1.4rem;
+  font-weight: 690;
 }
 
 button:hover {
   opacity: 0.5;
   cursor: pointer;
-}
-
-.zero {
-  width: 50%;
 }
 
 .symbole {
@@ -30,5 +32,25 @@ button:hover {
 }
 
 .zero {
+  width: 50%;
+}
+
+.showscreen {
+  background-color: rgb(105, 105, 105);
+  font-size: 2rem;
+  font-weight: bold;
+  height: 4rem;
+  line-height: 4rem;
+  padding: 0.5rem;
+  text-align: right;
+}
+
+.operationsign {
+  background: orange;
+}
+
+@media screen and (min-width: 768px) {
+  .maincalculator {
     width: 50%;
+  }
 }
