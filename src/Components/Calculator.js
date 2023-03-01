@@ -1,4 +1,5 @@
 import React from 'react';
+import CalculatorSign from './Calulatorsign';
 
 const AppCalculator = () => (
   <div className="maincalculator">
@@ -7,12 +8,7 @@ const AppCalculator = () => (
       <p>0</p>
     </div>
 
-    <div className="symbole">
-      <button type="button">AC</button>
-      <button type="button">+/-</button>
-      <button type="button">%</button>
-      <button type="button" className="operationsign"> ÷ </button>
-    </div>
+    <CalculatorSign />
 
     <div className="symbole">
       <button type="button">7</button>
