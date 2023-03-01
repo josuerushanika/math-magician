@@ -1,9 +1,9 @@
-import './App.css';
+import './Calculator.css';
+import AppCalculator from './Components/Calculator';
 
 function App() {
   return (
-    <div className="App"> Test </div>
-
+    <AppCalculator />
   );
 }
 
