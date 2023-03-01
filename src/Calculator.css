@@ -1,0 +1,56 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.maincalculator {
+  margin: 2rem auto;
+  width: 80%;
+}
+
+button {
+  padding: 1.5rem;
+  width: 25%;
+  font-size: 1.4rem;
+  font-weight: 690;
+}
+
+button:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.symbole {
+  justify-content: space-between;
+  display: flex;
+  width: 100%;
+}
+
+.zero {
+  width: 50%;
+}
+
+.showscreen {
+  background-color: rgb(105, 105, 105);
+  font-size: 2rem;
+  font-weight: bold;
+  height: 4rem;
+  line-height: 4rem;
+  padding: 0.5rem;
+  text-align: right;
+}
+
+.operationsign {
+  background: orange;
+}
+
+@media screen and (min-width: 768px) {
+  .maincalculator {
+    width: 50%;
+  }
+}
