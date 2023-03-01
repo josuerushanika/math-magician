@@ -143,6 +143,15 @@ If you like this project and want to show your support, please give it a ⭐️!
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+<!-- ACKNOWLEDGEMENTS -->
+
+## 🙏 Acknowledgments <a name="acknowledgements"></a>
+
+I would like to thank  everyone who inspired me to learn programming. Regards to the whole Microverse team, Peers, and family supporting. 
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
 <!-- LICENSE -->
 
 ## 📝 License <a name="license"></a>
