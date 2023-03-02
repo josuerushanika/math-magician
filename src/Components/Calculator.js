@@ -6,6 +6,8 @@ function AppCalculator() {
 
   const appendValue = (el) => {
     const value = el.target.getAttribute('data');
+
+    setCurrent(current + value);
     console.log(value);
   };
 
@@ -13,7 +15,7 @@ function AppCalculator() {
     <div className="maincalculator">
 
       <div className="showscreen">
-        <p>0</p>
+        <p>{current}</p>
       </div>
 
       <CalculatorSign />
@@ -41,7 +43,7 @@ function AppCalculator() {
 
       <div className="symbole">
         <button type="button" className="zero" data="0" onClick={appendValue}>0</button>
-        <button type="button" className="dot">.</button>
+        <button type="button" className="dot" data="." onClick={appendValue}>.</button>
         <button type="button" className="operationsign">=</button>
       </div>
 
