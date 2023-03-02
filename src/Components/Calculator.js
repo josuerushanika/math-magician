@@ -2,7 +2,9 @@ import React, { useState } from 'react';
 import CalculatorSign from './Calulatorsign';
 
 function AppCalculator() {
+  const [previous, setPrevious] = useState('');
   const [current, setCurrent] = useState('');
+  const [opration, setOpration] = useState('');
 
   const appendValue = (el) => {
     const value = el.target.getAttribute('data');
@@ -11,14 +13,30 @@ function AppCalculator() {
     setCurrent(current + value);
   };
 
+  const handleDelete = () => {
+    setCurrent(String(current).slice(0, -1));
+  };
+
   return (
     <div className="maincalculator">
 
       <div className="showscreen">
-        <p>{current}</p>
+        <previous>
+          {previous}
+          {' '}
+          {opration}
+        </previous>
+        <current>{current}</current>
       </div>
 
-      <CalculatorSign />
+      {/* <CalculatorSign /> */}
+
+      <div className="symbole">
+        <button onClick={handleDelete} type="button">AC</button>
+        <button type="button">+/-</button>
+        <button type="button">%</button>
+        <button type="button" className="operationsign"> ÷ </button>
+      </div>
 
       <div className="symbole">
         <button type="button" data="7" onClick={appendValue}>7</button>
