@@ -1,43 +1,52 @@
-import React from 'react';
+import React, { useState } from 'react';
 import CalculatorSign from './Calulatorsign';
 
-const AppCalculator = () => (
-  <div className="maincalculator">
+function AppCalculator() {
+  const [current, setCurrent] = useState('');
 
-    <div className="showscreen">
-      <p>0</p>
+  const appendValue = (el) => {
+    const value = el.target.getAttribute('data');
+    console.log(value);
+  };
+
+  return (
+    <div className="maincalculator">
+
+      <div className="showscreen">
+        <p>0</p>
+      </div>
+
+      <CalculatorSign />
+
+      <div className="symbole">
+        <button type="button" data="7" onClick={appendValue}>7</button>
+        <button type="button" data="8" onClick={appendValue}>8</button>
+        <button type="button" data="9" onClick={appendValue}>9</button>
+        <button type="button" className="operationsign">X</button>
+      </div>
+
+      <div className="symbole">
+        <button type="button" data="6" onClick={appendValue}>6</button>
+        <button type="button" data="5" onClick={appendValue}>5</button>
+        <button type="button" data="4" onClick={appendValue}>4</button>
+        <button type="button" className="operationsign"> - </button>
+      </div>
+
+      <div className="symbole">
+        <button type="button" data="3" onClick={appendValue}>3</button>
+        <button type="button" data="2" onClick={appendValue}>2</button>
+        <button type="button" data="1" onClick={appendValue}>1</button>
+        <button type="button" className="operationsign"> + </button>
+      </div>
+
+      <div className="symbole">
+        <button type="button" className="zero" data="0" onClick={appendValue}>0</button>
+        <button type="button" className="dot">.</button>
+        <button type="button" className="operationsign">=</button>
+      </div>
+
     </div>
-
-    <CalculatorSign />
-
-    <div className="symbole">
-      <button type="button">7</button>
-      <button type="button">8</button>
-      <button type="button">9</button>
-      <button type="button" className="operationsign">X</button>
-    </div>
-
-    <div className="symbole">
-      <button type="button">6</button>
-      <button type="button">5</button>
-      <button type="button">4</button>
-      <button type="button" className="operationsign"> - </button>
-    </div>
-
-    <div className="symbole">
-      <button type="button">3</button>
-      <button type="button">2</button>
-      <button type="button">1</button>
-      <button type="button" className="operationsign"> + </button>
-    </div>
-
-    <div className="symbole">
-      <button type="button" className="zero">0</button>
-      <button type="button" className="dot">.</button>
-      <button type="button" className="operationsign">=</button>
-    </div>
-
-  </div>
-);
+  );
+}
 
 export default AppCalculator;
