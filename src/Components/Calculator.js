@@ -1,68 +1,54 @@
 import React, { useState } from 'react';
-import CalculatorSign from './Calulatorsign';
+import calculate from '../logic/calculate';
 
 function AppCalculator() {
-  const [previous, setPrevious] = useState('');
-  const [current, setCurrent] = useState('');
-  const [opration, setOpration] = useState('');
+  const [state, setState] = useState({ total: 0, next: null, operation: null });
 
-  const appendValue = (el) => {
-    const value = el.target.getAttribute('data');
-
-    if (value === '.' && current.includes('.')) return;
-    setCurrent(current + value);
-  };
-
-  const handleDelete = () => {
-    setCurrent(String(current).slice(0, -1));
+  const clickHandler = (e) => {
+    setState((state) => calculate(state, e.target.name));
   };
 
   return (
     <div className="maincalculator">
 
       <div className="showscreen">
-        <previous>
-          {previous}
-          {' '}
-          {opration}
-        </previous>
-        <current>{current}</current>
-      </div>
-
-      {/* <CalculatorSign /> */}
-
-      <div className="symbole">
-        <button onClick={handleDelete} type="button">AC</button>
-        <button type="button">+/-</button>
-        <button type="button">%</button>
-        <button type="button" className="operationsign"> ÷ </button>
+        {state.total}
+        {state.operation}
+        {state.next}
       </div>
 
       <div className="symbole">
-        <button type="button" data="7" onClick={appendValue}>7</button>
-        <button type="button" data="8" onClick={appendValue}>8</button>
-        <button type="button" data="9" onClick={appendValue}>9</button>
-        <button type="button" className="operationsign">X</button>
+        <button onClick={clickHandler} name="AC" type="button">AC</button>
+        <button type="button" name="+/-" onClick={clickHandler}>+/-</button>
+        <button type="button" name="%" onClick={clickHandler}>%</button>
+        <button type="button" name="÷" className="operationsign" onClick={clickHandler}> ÷ </button>
       </div>
 
       <div className="symbole">
-        <button type="button" data="6" onClick={appendValue}>6</button>
-        <button type="button" data="5" onClick={appendValue}>5</button>
-        <button type="button" data="4" onClick={appendValue}>4</button>
-        <button type="button" className="operationsign"> - </button>
+        <button type="button" name="7" onClick={clickHandler}>7</button>
+        <button type="button" name="8" onClick={clickHandler}>8</button>
+        <button type="button" name="9" onClick={clickHandler}>9</button>
+        <button type="button" name="X" onClick={clickHandler} className="operationsign">X</button>
       </div>
 
       <div className="symbole">
-        <button type="button" data="3" onClick={appendValue}>3</button>
-        <button type="button" data="2" onClick={appendValue}>2</button>
-        <button type="button" data="1" onClick={appendValue}>1</button>
-        <button type="button" className="operationsign"> + </button>
+        <button type="button" name="6" onClick={clickHandler}>6</button>
+        <button type="button" name="5" onClick={clickHandler}>5</button>
+        <button type="button" name="4" onClick={clickHandler}>4</button>
+        <button type="button" name="-" onClick={clickHandler} className="operationsign"> - </button>
       </div>
 
       <div className="symbole">
-        <button type="button" className="zero" data="0" onClick={appendValue}>0</button>
-        <button type="button" className="dot" data="." onClick={appendValue}>.</button>
-        <button type="button" className="operationsign">=</button>
+        <button type="button" name="3" onClick={clickHandler}>3</button>
+        <button type="button" name="2" onClick={clickHandler}>2</button>
+        <button type="button" name="1" onClick={clickHandler}>1</button>
+        <button type="button" name="+" onClick={clickHandler} className="operationsign"> + </button>
+      </div>
+
+      <div className="symbole">
+        <button type="button" className="zero" name="0" onClick={clickHandler}>0</button>
+        <button type="button" className="dot" name="." onClick={clickHandler}>.</button>
+        <button type="button" className="operationsign" name="=" onClick={clickHandler}>=</button>
       </div>
 
     </div>
