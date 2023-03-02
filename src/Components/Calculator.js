@@ -28,7 +28,7 @@ function AppCalculator() {
         <button type="button" name="7" onClick={clickHandler}>7</button>
         <button type="button" name="8" onClick={clickHandler}>8</button>
         <button type="button" name="9" onClick={clickHandler}>9</button>
-        <button type="button" name="X" onClick={clickHandler} className="operationsign">X</button>
+        <button type="button" name="x" onClick={clickHandler} className="operationsign">X</button>
       </div>
 
       <div className="symbole">
