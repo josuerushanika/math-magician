@@ -54,3 +54,40 @@ button:hover {
     width: 50%;
   }
 }
+
+header {
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 1rem;
+  font-size: 17px;
+}
+
+nav {
+  display: flex;
+  gap: 16px;
+  justify-content: end;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-right: 15px;
+  list-style: none;
+  font-size: 18px;
+}
+
+.home {
+  width: 90%;
+  margin: 10% 5%;
+  font-size: 18px;
+}
+
+.page-calculator {
+  font-size: 20px;
+  margin-left: 1rem;
+}
+
+.quote {
+  display: flex;
+  align-items: center;
+  width: 60%;
+  margin: 10rem auto;
+  font-size: 22px;
+}
