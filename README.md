@@ -1,6 +1,6 @@
+<img src="img/calc-app.gif" alt="logo" width="140"  height="auto" />
 <a name="readme-top"></a>
- <img src="img/calc-app.gif" alt="logo" width="140"  height="auto" />
-
+ 
 <!-- TABLE OF CONTENTS -->
 
 # 📗 Table of Contents
