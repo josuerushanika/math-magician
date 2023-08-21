@@ -1,6 +1,15 @@
-<img src="img/calc-app.gif" alt="logo" width="140"  height="auto" />
-<a name="readme-top"></a>
+
+<div align ="center">
+
+ <img src="img/calc-app.gif" alt="logo" width="140"  height="auto" />
  
+  <br/>
+
+  <h3><b>Math Magician</b></h3>
+
+</div>
+
+
 <!-- TABLE OF CONTENTS -->
 
 # 📗 Table of Contents
